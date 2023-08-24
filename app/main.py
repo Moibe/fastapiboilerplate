@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 import requests
+from app.config import API_KEY
+
 
 app = FastAPI()
 
@@ -29,7 +31,7 @@ def obten_estado():
 
     url = "https://onlinesim.io/api/getState.php"
 
-    querystring = {"apikey":"fjYyvCrMY7947Jc-97mBXv2D-SS1zaVt3-ycq5rw8A-x6fjndCDUuxCd45"}
+    querystring = {"apikey": API_KEY}
 
     payload = ""
     response = requests.request("GET", url, data=payload, params=querystring)
