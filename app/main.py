@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 import requests
-from config import API_KEY
+#from config import API_KEY
 
 
 app = FastAPI()
@@ -26,17 +26,18 @@ def validar_capicua(numero:str):
         "validacion": respuesta
     }
 
-@app.get("/obtenEstado")
-def obten_estado():
+# @app.get("/obtenEstado")
+# def obten_estado():
 
-    url = "https://onlinesim.io/api/getState.php"
+#     url = "https://onlinesim.io/api/getState.php"
 
-    querystring = {"apikey": API_KEY}
+#     querystring = {"apikey": API_KEY}
 
-    payload = ""
-    response = requests.request("GET", url, data=payload, params=querystring)
+#     payload = ""
+#     response = requests.request("GET", url, data=payload, params=querystring)
 
            
-    return {
-        response.text
-    }
+#     return {
+#         response.text
+
+#     }
